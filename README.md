@@ -1,8 +1,11 @@
-# Java-17-onARM
-Run java on your ARM device
+# Java On Arm
+Run java on your ARM device!
 
-# REQURIMENTS
- apt install wget
+## REQUIRIMENT
+```sh-session
+Download the requirement, use
+~$ sudo apt install wget
+```
 
 # USE
  wget https://raw.githubusercontent.com/LightNabz/Java-17-onARM/main/java-17.0.1-arm64.sh
