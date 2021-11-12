@@ -15,6 +15,7 @@ after doing as above, use
 $ bash JavaTermux32.sh
 or,
 $ bash JavaTermux64.sh
+```
 
 And enjoy your java on termux.
 
