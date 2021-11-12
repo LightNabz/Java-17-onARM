@@ -5,11 +5,11 @@ running java on termux
 ```sh-session
 $ wget --no-check-certificate https://raw.githubusercontent.com/LightNabz/JavaOnArm/main/Termux/JavaTermux32.sh
 ```
-`(for 32bit)`
+`for 32bit`
 ```sh-session
 $ wget --no-check-certificate https://raw.githubusercontent.com/LightNabz/JavaOnArm/main/Termux/JavaTermux64.sh
 ```
-`(for 64bit)`
+`for 64bit`
 after doing as above, use
 
 ```sh-session
