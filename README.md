@@ -27,4 +27,5 @@ $ wget --no-check-certificate https://raw.githubusercontent.com/LightNabz/Java-1
  (for 32bit)
  ```
 and yeah, java has sucsesfully installed on your arm device.
-if you wants install java on termux, just change /usr to $PREFIX/usr :)
+
+if you wants install java on termux, just change `/usr/etc` to `$PREFIX/usr/etc` with nano or vim
