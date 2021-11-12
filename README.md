@@ -1,7 +1,7 @@
 # Java On Arm
 Run java on your ARM device!
 
-https://upload.hicoria.com/files/P1PH9H4S.png
+![Screenshot](https://upload.hicoria.com/files/P1PH9H4S.png)
 
 ## REQUIRIMENT
 ```sh-session
