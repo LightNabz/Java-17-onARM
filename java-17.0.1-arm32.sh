@@ -35,7 +35,7 @@ echo ""
 
 #start set java for dpkg
 echo -e "\e[33mSetup Java..."
-echo -e "\e[33mThis may take a few moments, you maybe can grab a coffe again :)..."
+echo -e "\e[33mThis may take a few moments..."
 tar -xvzf bellsoft-jdk17.0.1+12-linux-arm32-vfp-hflt.tar.gz &> /dev/null
 mv ~/jdk-17.0.1 /usr/lib/jvm
 update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-17.0.1/bin/java" 0 &> /dev/null
@@ -43,13 +43,15 @@ update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-17.0.1/
 update-alternatives --set java /usr/lib/jvm/jdk-17.0.1/bin/java &> /dev/null
 update-alternatives --set javac /usr/lib/jvm/jdk-17.0.1/bin/javac &> /dev/null
 update-alternatives --list java &> /dev/null
-update-alternatives --list javac
+update-alternatives --list javac &> /dev/null
 rm -rf ~/bellsoft-jdk17.0.1+12-linux-arm32-vfp-hflt.tar.gz
 echo -e "\e[33mDone!"
 echo ""
 echo -e "\e[36mEnjoy your Java JDK-17 on ARM and the coffe :)"
 echo -e "\e[36mIf you grab a coffe :v"
 echo ""
+#reset the color
+echo -e "\e[0m"
 java -version
 
 #End of bash
