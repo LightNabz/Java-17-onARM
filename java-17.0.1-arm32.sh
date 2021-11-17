@@ -27,15 +27,11 @@ echo -e "\e[33mDone!"
 echo ""
 
 #start installing java tgz files
-echo -e "\e[33mInstalling Java..."
+echo -e "\e[33mInstalling and setup Java..."
 echo -e "\e[33mThis may take a few moments, you maybe can grab a coffe :)..."
 wget --no-check-certificate https://download.bell-sw.com/java/17.0.1+12/bellsoft-jdk17.0.1+12-linux-arm32-vfp-hflt.tar.gz &> /dev/null
-echo -e "\e[33mDone!"
-echo ""
 
 #start set java for dpkg
-echo -e "\e[33mSetup Java..."
-echo -e "\e[33mThis may take a few moments..."
 tar -xvzf bellsoft-jdk17.0.1+12-linux-arm32-vfp-hflt.tar.gz &> /dev/null
 mv ~/jdk-17.0.1 /usr/lib/jvm
 update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-17.0.1/bin/java" 0 &> /dev/null
