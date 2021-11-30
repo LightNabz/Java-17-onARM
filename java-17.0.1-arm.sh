@@ -14,8 +14,7 @@ echo -e "\e[34m##################################################"
 echo ""
 echo -e "\e[91mNOTE:"
 echo -e "\e[33mJava file source taken from \e[96mBellSoft Liberica"
-dpkg --print-architecture
-read cpuarch
+cpuarch=`dpkg --print-architecture`
 echo -e "\e[33mYour arm architecture is $cpuarch"
 echo -e "\e[33mPlease dont recode this script"
 echo ""
