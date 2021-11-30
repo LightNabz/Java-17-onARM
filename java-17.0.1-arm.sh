@@ -43,15 +43,16 @@ armhf)
 arm)
       archurl="arm32-vfp-hflt" ;;
 amd64)
-      echo "\e[31mYour architecture not complatible"
+      echo "\e[31mYour architecture not complatible" ;;
 x86_64)
-      echo "\e[31mYour architecture not complatible"
-X86)
-      echo "\e[31mYour architecture not complatible"
+      echo "\e[31mYour architecture not complatible" ;;
+x86)
+      echo "\e[31mYour architecture not complatible" ;;
 i*86)
-      echo "\e[31mYour architecture not complatible"
+      echo "\e[31mYour architecture not complatible" ;;
 *)
-      echo "\e[31mYour architecture not complatible"
+      echo "\e[31mYour architecture not complatible" ;;
+
 esac
 wget --no-check-certificate https://download.bell-sw.com/java/17.0.1+12/bellsoft-jdk17.0.1+12-linux-{$archurl}.tar.gz &> /dev/null
 
