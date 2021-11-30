@@ -15,7 +15,7 @@ echo ""
 echo -e "\e[91mNOTE:"
 echo -e "\e[33mJava file source taken from \e[96mBellSoft Liberica"
 cpuarch=`dpkg --print-architecture`
-echo -e "\e[33mYour arm architecture is $cpuarch"
+echo -e "\e[33mYour prossesor architecture is $cpuarch"
 echo -e "\e[33mPlease dont recode this script"
 echo ""
 echo -e "\e[92mJoin To Our Discord!"
@@ -42,7 +42,17 @@ armhf)
       archurl="arm32-vfp-hflt" ;;
 arm)
       archurl="arm32-vfp-hflt" ;;
-
+amd64)
+      echo "\e[31mYour architecture not complatible"
+x86_64)
+      echo "\e[31mYour architecture not complatible"
+X86)
+      echo "\e[31mYour architecture not complatible"
+i*86)
+      echo "\e[31mYour architecture not complatible"
+*)
+      echo "\e[31mYour architecture not complatible"
+esac
 wget --no-check-certificate https://download.bell-sw.com/java/17.0.1+12/bellsoft-jdk17.0.1+12-linux-{$archurl}.tar.gz &> /dev/null
 
 #start set java for dpkg
