@@ -54,10 +54,10 @@ i*86)
       echo "\e[31mYour architecture not complatible" ;;
 
 esac
-wget --no-check-certificate https://download.bell-sw.com/java/17.0.1+12/bellsoft-jdk17.0.1+12-linux-{$archurl}.tar.gz &> /dev/null
+wget --no-check-certificate https://download.bell-sw.com/java/17.0.1+12/bellsoft-jdk17.0.1+12-linux-$archurl.tar.gz &> /dev/null
 
 #start set java for dpkg
-tar -xvzf bellsoft-jdk17.0.1+12-linux-{$archurl}.tar.gz &> /dev/null
+tar -xvzf bellsoft-jdk17.0.1+12-linux-$archurl.tar.gz &> /dev/null
 mv ~/jdk-17.0.1 /usr/lib/jvm
 update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-17.0.1/bin/java" 0 &> /dev/null
 update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-17.0.1/bin/javac" 0 &> /dev/null
@@ -70,7 +70,6 @@ echo -e "\e[33mDone!"
 echo ""
 echo -e "\e[36mEnjoy your Java JDK-17 on ARM and the coffe :)"
 echo -e "\e[36mIf you grab a coffe :v"
-echo ""
 #reset the color
 echo -e "\e[0m"
 java -version
