@@ -6,7 +6,7 @@
 echo -e "\e[34m##################################################"
 echo -e "\e[34m#                                                #"
 echo -e "\e[34m#                                                #"
-echo -e "\e[34m#              MADE BY LIGHNABZ                  #"
+echo -e "\e[34m#                MADE BY LIGHNABZ                #"
 echo -e "\e[34m#                                                #"
 echo -e "\e[34m#                                                #"
 echo -e "\e[34m##################################################"
@@ -65,7 +65,7 @@ update-alternatives --set java /usr/lib/jvm/jdk-17.0.1/bin/java &> /dev/null
 update-alternatives --set javac /usr/lib/jvm/jdk-17.0.1/bin/javac &> /dev/null
 update-alternatives --list java &> /dev/null
 update-alternatives --list javac &> /dev/null
-rm -rf ~/bellsoft-jdk17.0.1+12-linux-arm32-vfp-hflt.tar.gz
+rm -rf ~/bellsoft-jdk17.0.1+12-linux-$archurl.tar.gz
 echo -e "\e[33mDone!"
 echo ""
 echo -e "\e[36mEnjoy your Java JDK-17 on ARM and the coffe :)"
