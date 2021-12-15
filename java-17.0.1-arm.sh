@@ -24,15 +24,15 @@ echo ""
 echo ""
 
 #start installing the requiriments
-echo -ne '|...                       \r| [26%] '
+echo -e "\e[33mInstalling requiriments..."
 apt-get install wget -y &> /dev/null
 mkdir /usr/lib/jvm &> /dev/null
 echo -e "\e[33mDone!"
 echo ""
-sleep 2
 
 #start installing java tgz files
-echo -ne '|.......                    \r| [47%] '
+echo -e "\e[33mInstalling and setup Java..."
+echo -e "\e[33mThis may take a few moments, you maybe can grab a coffe :)..."
 case `dpkg --print-architecture` in
 arm64)
       archurl="aarch64" ;;
@@ -55,25 +55,17 @@ i*86)
 
 esac
 wget --no-check-certificate https://download.bell-sw.com/java/17.0.1+12/bellsoft-jdk17.0.1+12-linux-$archurl.tar.gz &> /dev/null
-sleep 2
 
-echo -ne '|...............              \r| [89%] '
 #start set java for dpkg
 tar -xvzf bellsoft-jdk17.0.1+12-linux-$archurl.tar.gz &> /dev/null
 mv ~/jdk-17.0.1 /usr/lib/jvm
-sleep 2
-echo -ne '|............................ \r| [98%] '
 update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-17.0.1/bin/java" 0 &> /dev/null
 update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-17.0.1/bin/javac" 0 &> /dev/null
 update-alternatives --set java /usr/lib/jvm/jdk-17.0.1/bin/java &> /dev/null
 update-alternatives --set javac /usr/lib/jvm/jdk-17.0.1/bin/javac &> /dev/null
-sleep 2
-echo -ne '|..............................\r| [100%] '
 update-alternatives --list java &> /dev/null
 update-alternatives --list javac &> /dev/null
 rm -rf ~/bellsoft-jdk17.0.1+12-linux-$archurl.tar.gz
-sleep 2
-echo -ne '\n'
 echo -e "\e[33mDone!"
 echo ""
 echo -e "\e[36mEnjoy your Java JDK-17 on ARM and the coffe :)"
